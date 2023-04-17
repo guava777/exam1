@@ -1,0 +1,15 @@
+#ifndef MAP_H
+#define MAP_H
+
+#define ADDER_INPUT_ADDR_BASE 0
+#define ADDER_INPUT_ADDR_SIZE 8
+#define ADDER_INPUT_R1 0
+#define ADDER_INPUT_R2 4
+#define ADDER_OUTPUT_ADDR_BASE 8
+#define ADDER_OUTPUT_ADDR_SIZE 4
+#define ADDER_OUTPUT_R1 0
+
+#define BUFFER_ADDR_BASE 64
+#define BUFFER_ADDR_SIZE 64<<2
+
+#endif
