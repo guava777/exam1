@@ -13,6 +13,9 @@ int sc_main(int argc, char *argv[]) {
   sc_signal<sc_uint<WIDTH> > s_i_a_msg;
   sc_signal<bool> s_i_a_rdy;
   sc_signal<bool> s_i_a_vld;
+  sc_signal<sc_uint<WIDTH> > s_i_b_msg;
+  sc_signal<bool> s_i_b_rdy;
+  sc_signal<bool> s_i_b_vld;
   sc_signal<sc_uint<WIDTH + 1> > s_o_sum_msg;
   sc_signal<bool> s_o_sum_rdy;
   sc_signal<bool> s_o_sum_vld;
@@ -25,12 +28,18 @@ int sc_main(int argc, char *argv[]) {
   testbench.o_a.msg(s_i_a_msg);
   testbench.o_a.vld(s_i_a_vld);
   testbench.o_a.rdy(s_i_a_rdy);
+  testbench.o_b.msg(s_i_b_msg);
+  testbench.o_b.vld(s_i_b_vld);
+  testbench.o_b.rdy(s_i_b_rdy);
   testbench.i_sum.msg(s_o_sum_msg);
   testbench.i_sum.vld(s_o_sum_vld);
   testbench.i_sum.rdy(s_o_sum_rdy);
   dut.i_a_port.msg(s_i_a_msg);
   dut.i_a_port.vld(s_i_a_vld);
   dut.i_a_port.rdy(s_i_a_rdy);
+  dut.i_b_port.msg(s_i_b_msg);
+  dut.i_b_port.vld(s_i_b_vld);
+  dut.i_b_port.rdy(s_i_b_rdy);
   dut.o_sum_port.msg(s_o_sum_msg);
   dut.o_sum_port.vld(s_o_sum_vld);
   dut.o_sum_port.rdy(s_o_sum_rdy);
